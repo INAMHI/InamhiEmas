@@ -170,15 +170,23 @@ echo $estanomb;
         echo '<table id=datos class="display"   >';
 
         echo '<thead>';
-        echo '<tr><th>GRAFICAR:
+        if ($_GET['tipo'] === 'METEOROLOGICA') {
+            echo '<tr><th>GRAFICAR:
             <select name="thelist" onChange="combo(this, \'theinput\')" >
             <option>Seleccione una</option>
             <option>Temperatura</option>
             <option>Precipitacion</option>
             <option>Humedad</option>
             <option>Viento</option>
+             </select></th></tr>';
+        } else {
+            echo '<tr><th>GRAFICAR:
+            <select name="thelist" onChange="combo(this, \'theinput\')" >
+            <option>Seleccione una</option>
             <option>Nivel</option>
              </select></th></tr>';
+        }
+
 
         for ($i = 0; $i < count($datosCopas['nombre_parametro']); $i++) {
             if ($i == 0) {

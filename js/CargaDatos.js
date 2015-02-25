@@ -257,7 +257,7 @@ function ejemplo(){
 }
 
 
-function cargarDatosEstaciones(id,nombre){
+function cargarDatosEstaciones(id,nombre,tipo){
     //    alert('llamando al server');
-    location.href = "datos.php?esta__id="+id+"&estanomb="+nombre;
+    location.href = "datos.php?esta__id="+id+"&estanomb="+nombre+"&tipo="+tipo;
 }

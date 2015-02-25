@@ -98,6 +98,7 @@
                                         altitud: $.estaciones[i].cooraltu,
                                         estado: $.estaciones[i].estenomb,
                                         esta__id: $.estaciones[i].esta__id,
+                                        categoria: $.estaciones[i].catenomb,
                                         iconx: $.estaciones[i].esteicon});
 
                                     // Agregar los puntos a la capa vectorial
@@ -116,6 +117,7 @@
                                         altitud: $.estaciones[i].cooraltu,
                                         estado: $.estaciones[i].estenomb,
                                         esta__id: $.estaciones[i].esta__id,
+                                        categoria: $.estaciones[i].catenomb,
                                         iconx: $.estaciones[i].esteicon});
 
                                     // Agregar los puntos a la capa vectorial
@@ -203,8 +205,9 @@
                             "<p>Latitud: " + feature.attributes.latitud + "</p>" +
                             "<p>Longitud: " + feature.attributes.longitud + "</p>" +
                             "<p>Altura: " + feature.attributes.altitud + " metros</p>" +
+                            "<p>Tipo: " + feature.attributes.categoria + "</p>" +
                             "<p>Estado: " + feature.attributes.estado + "</p>" +
-                            "<a href=\"javascript:cargarDatosEstaciones('" + feature.attributes.esta__id + "','" + feature.attributes.estacion + "')\">VER DATOS</a>",
+                            "<a href=\"javascript:cargarDatosEstaciones('" + feature.attributes.esta__id + "','" + feature.attributes.estacion + "','" + feature.attributes.categoria + "')\">VER DATOS</a>",
                             //                    "<input type=\"button\" />",
                             null, true, onPopupClose);
                     feature.popup = popup;
