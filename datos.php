@@ -40,9 +40,8 @@ echo $estanomb;
                     scrollX: 600,
                     scrollY: 600,
                     scrollCollapse: false,
-                    paging: false
-
-
+                    paging: false,
+                    order: [[0, "desc"]]
                 });
                 table.columns.adjust().draw();
                 new $.fn.dataTable.FixedColumns(table, {
@@ -157,7 +156,7 @@ echo $estanomb;
 //        echo $query;
         $datosaux = $objConsultaDatos->EjecutarConsulta($query);
 //        echo '<pre>';
-//        print_r($nemonicos);
+//        print_r($datosaux);
 //        echo '</pre>';
 //
 
